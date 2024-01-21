@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Geometry.Abstracts;
 
 namespace Geometry.Models
 {
-    public class Circle
+    public class Circle : Figure
     {
+
+        public override double Area => throw new NotImplementedException();
     }
 }
