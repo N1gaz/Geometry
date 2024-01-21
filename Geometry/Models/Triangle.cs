@@ -1,4 +1,7 @@
 ﻿using Geometry.Abstracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Geometry.Models
 {
@@ -19,7 +22,7 @@ namespace Geometry.Models
         {
             if (sides is null || sides.Count() != 3) throw new ArgumentException("У треугольника должно быть три стороны");
 
-            var sortedSides = sides.OrderDescending().ToArray();
+            var sortedSides = sides.OrderByDescending(x => x).ToArray();
 
             if (!CheckEveryLength(sortedSides)) throw new ArgumentException("Некорректный ввод. Сторона может быть строго больше нуля.");
             if (!CheckAllLengths(sortedSides)) throw new ArgumentException("Некорректный ввод. Одна сторона не может быть больше двух других");
