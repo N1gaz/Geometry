@@ -36,8 +36,8 @@ namespace Geometry.Models
 
         private bool CheckAllLengths(IEnumerable<double> sortedSides) => sortedSides.ElementAt(0) < sortedSides.ElementAt(1) + sortedSides.ElementAt(2);
 
-        private double Perimeter => _sides.Sum();
-        public override double Area => Math.Sqrt(Perimeter * (Perimeter - _sides[0]) * (Perimeter - _sides[1]) * (Perimeter - _sides[2]));
+        private double P => _sides.Sum() / 2.0; //Полупериметр
+        public override double Area => Math.Sqrt(P * (P - _sides[0]) * (P - _sides[1]) * (P - _sides[2]));
         public bool IsRightTriangle => _sides[0] * _sides[0] == _sides[1] * _sides[1] + _sides[2] * _sides[2];
     }
 }
