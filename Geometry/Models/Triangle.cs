@@ -17,7 +17,7 @@ namespace Geometry.Models
 
         public Triangle(IEnumerable<double> sides)
         {
-            if (_sides is null || _sides.Count() != 3) throw new ArgumentException("У треугольника должно быть три стороны");
+            if (sides is null || sides.Count() != 3) throw new ArgumentException("У треугольника должно быть три стороны");
 
             var sortedSides = sides.OrderDescending().ToArray();
 
