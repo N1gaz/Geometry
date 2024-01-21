@@ -9,7 +9,7 @@ namespace Geometry.Implementations
 {
     public static class Geometry
     {
-        public static float GetFigureArea(Figure figure) =>
+        public static double GetFigureArea(Figure figure) =>
             figure.Area;
     }
 }

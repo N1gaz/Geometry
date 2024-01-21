@@ -8,6 +8,6 @@
         /// <summary>
         /// Площадь фигуры. Минимальная точность
         /// </summary>
-        public abstract float Area { get; }
+        public abstract double Area { get; }
     }
 }
