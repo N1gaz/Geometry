@@ -29,7 +29,7 @@ namespace Geometry.Models
 
         private bool CheckEveryLength(IEnumerable<double> sides)
         {
-            foreach (var side in _sides)
+            foreach (var side in sides)
                 if(!(side >  0)) return false;
             return true;
         }
